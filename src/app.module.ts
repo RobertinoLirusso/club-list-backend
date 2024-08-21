@@ -11,10 +11,10 @@ import { ConfigModule } from '@nestjs/config';
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async () => ({
-        type: 'postgres',
-        url: process.env.DATABASE_URL, 
+        type: 'sqlite',
+        database: process.env.DB_NAME,
         autoLoadEntities: true,
-        synchronize: false,
+        synchronize: true,
       }),
   }),
     ClubModule],
