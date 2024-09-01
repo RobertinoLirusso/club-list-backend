@@ -9,9 +9,12 @@ export class Club {
     name: string;
 
     @Column()
-    logo_url: string;
+    city_country: string;
 
-    @Column('varchar', {length: 500})
-    description: string;
+    @Column('varchar', {length: 300}) 
+    description: string
+
+    @Column()
+    logo_url: string;
 
 }
