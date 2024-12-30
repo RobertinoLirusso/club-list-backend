@@ -11,8 +11,8 @@ import { ConfigModule } from '@nestjs/config';
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async () => ({
-        type: 'sqlite',
-        database: process.env.DB_NAME,
+        type: 'postgres',
+        url: process.env.DATABASE_URL, 
         autoLoadEntities: true,
         synchronize: true,
       }),
