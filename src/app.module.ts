@@ -15,6 +15,9 @@ import { ConfigModule } from '@nestjs/config';
         url: process.env.DATABASE_URL, 
         autoLoadEntities: true,
         synchronize: false,
+        ssl: {
+          rejectUnauthorized: false,
+        },        
       }),
   }),
     ClubModule],
