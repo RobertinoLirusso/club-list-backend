@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: ['https://club-list-backend.onrender.com/club'],
+    origin: ['https://worldclubs.vercel.app/'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   });
   await app.listen(3000);
